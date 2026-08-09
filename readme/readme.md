@@ -46,21 +46,19 @@ Student-Hub/
 ├── profile.html
 ├── attendance.html
 ├── timetable.html
-├── academics.html
-├── resources.html
-├── announcements.html
-├── events.html
-├── notifications.html
+├── course.html
+├── contact.html
+├── result.html
+├── login.html
+├── assignment.html
 │
 ├── css/
 │   └── style.css
 │
 ├── js/
 │   └── script.js
-│
-├── assets/
-│   ├── images/
-│   └── icons/
+├── images/
+│   └── icons
 │
 └── README.md
 ```
