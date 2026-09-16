@@ -1,99 +1,258 @@
-/* Blue & Black Theme */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+
+table {
+    color: inherit;
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background-color:#0d1117;   /* Dark Black */
-    color:white;
-    line-height:1.6;
+th,
+td {
+    color: inherit;
+}
+
+/* Dark Mode */
+
+body.dark-mode table {
+    color: #f0f6fc;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+    color: #f0f6fc;
+}
+
+/* Light Mode */
+
+body.light-mode table {
+    color: #111827;
+}
+
+body.light-mode th,
+body.light-mode td {
+    color: #111827;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    color: white;
+    line-height: 1.6;
 }
 
 /* Navigation Bar */
-nav{
-    background:#007BFF;
-    padding:15px;
+
+nav {
+    background: #007BFF;
+    padding: 15px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-nav a:hover{
-    color:#000;
+nav a:hover {
+    color: #000;
 }
 
 /* Header */
-header{
-    background:#161b22;
-    color:#00BFFF;
-    text-align:center;
-    padding:30px;
+
+header {
+    background: #161b22;
+    color: #00BFFF;
+    text-align: center;
+    padding: 30px;
 }
 
 /* Main Content */
-main{
-    padding:30px;
+
+main {
+    padding: 30px;
 }
 
 /* Sections */
-section{
-    background:#1c1f26;
-    padding:20px;
-    margin:20px 0;
-    border-left:5px solid #007BFF;
-    border-radius:10px;
+
+section {
+    background: #1c1f26;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid #007BFF;
+    border-radius: 10px;
 }
 
 /* Headings */
-h1,h2,h3{
-    color:#00BFFF;
-    margin-bottom:10px;
+
+h1,
+h2,
+h3 {
+    color: #00BFFF;
+    margin-bottom: 10px;
 }
 
 /* Paragraphs */
-p{
-    color:#dcdcdc;
+
+p {
+    color: #dcdcdc;
 }
 
 /* Buttons */
-button{
-    background:#007BFF;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:16px;
+
+button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-button:hover{
-    background:#0056b3;
+button:hover {
+    background: #0056b3;
 }
 
 /* Input Fields */
-input, textarea{
-    width:100%;
-    padding:10px;
-    margin:10px 0;
-    background:#222;
-    color:white;
-    border:1px solid #007BFF;
-    border-radius:5px;
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #222;
+    color: white;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
 }
 
 /* Footer */
-footer{
-    background:#161b22;
-    color:white;
-    text-align:center;
-    padding:15px;
-    margin-top:20px;
+
+footer {
+    background: #161b22;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+
+/* ==========================================
+   THEME BUTTON
+   ========================================== */
+
+#themeToggle {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #1f6feb;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   LIGHT MODE
+   ========================================== */
+
+body.light-mode {
+    background-color: #f5f7fa !important;
+    color: #111827 !important;
+}
+
+body.light-mode header {
+    background-color: white !important;
+    color: #007BFF !important;
+}
+
+body.light-mode section {
+    background-color: white !important;
+    color: #111827 !important;
+}
+
+body.light-mode .card {
+    background-color: white !important;
+    color: #111827 !important;
+}
+
+body.light-mode p {
+    color: #374151 !important;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3 {
+    color: #007BFF !important;
+}
+
+body.light-mode input,
+body.light-mode textarea {
+    background-color: white !important;
+    color: #111827 !important;
+}
+
+body.light-mode footer {
+    background-color: white !important;
+    color: #111827 !important;
+}
+
+
+/* ==========================================
+   DARK MODE
+   ========================================== */
+
+body.dark-mode {
+    background-color: #0d1117 !important;
+    color: #f0f6fc !important;
+}
+
+body.dark-mode header {
+    background-color: #161b22 !important;
+    color: #00BFFF !important;
+}
+
+body.dark-mode section {
+    background-color: #1c1f26 !important;
+    color: #f0f6fc !important;
+}
+
+body.dark-mode .card {
+    background-color: #1c1f26 !important;
+    color: #f0f6fc !important;
+}
+
+body.dark-mode p {
+    color: #dcdcdc !important;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #222 !important;
+    color: white !important;
+}
+
+body.dark-mode footer {
+    background-color: #161b22 !important;
+    color: white !important;
+}
+
+
+/* ==========================================
+   THEME TRANSITION
+   ========================================== */
+
+body,
+header,
+section,
+.card,
+footer,
+input,
+textarea {
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
