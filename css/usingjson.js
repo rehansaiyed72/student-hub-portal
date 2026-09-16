@@ -1,4 +1,4 @@
-fetch("understandingjson.json")
+fetch("understandingjson.json")git add
     .then(response => response.json())
     .then(data => {
         console.log("Name: " + data.name);
