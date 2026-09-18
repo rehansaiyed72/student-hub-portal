@@ -256,3 +256,125 @@ input,
 textarea {
     transition: background-color 0.25s ease, color 0.25s ease;
 }
+/* ==========================================
+   STUDENT REGISTRATION FORM
+   ========================================== */
+
+.registration-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #1c1f26;
+    border-radius: 10px;
+    border-left: 5px solid #007BFF;
+}
+
+.registration-container label {
+    display: block;
+    margin-top: 12px;
+    color: #f0f6fc;
+    font-weight: bold;
+}
+
+.registration-container input[type="text"],
+.registration-container input[type="email"],
+.registration-container input[type="tel"],
+.registration-container input[type="password"],
+.registration-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 4px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+}
+
+.registration-container input:focus,
+.registration-container select:focus {
+    outline: none;
+    border: 2px solid #00BFFF;
+}
+
+.registration-container input[type="radio"],
+.registration-container input[type="checkbox"] {
+    width: auto;
+    margin: 8px 5px 8px 0;
+}
+
+.registration-container .gender-option {
+    display: inline-block;
+    margin-right: 20px;
+    color: #dcdcdc;
+    font-weight: normal;
+}
+
+.registration-container .terms-option {
+    display: inline-block;
+    color: #dcdcdc;
+    font-weight: normal;
+}
+
+.registration-container .error {
+    display: block;
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.registration-container #success {
+    color: #00c853;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Light Mode */
+
+body.light-mode .registration-container {
+    background-color: white;
+    color: #111827;
+}
+
+body.light-mode .registration-container label {
+    color: #111827;
+}
+
+body.light-mode .registration-container input[type="text"],
+body.light-mode .registration-container input[type="email"],
+body.light-mode .registration-container input[type="tel"],
+body.light-mode .registration-container input[type="password"],
+body.light-mode .registration-container select {
+    background-color: white;
+    color: #111827;
+}
+
+body.light-mode .registration-container .gender-option,
+body.light-mode .registration-container .terms-option {
+    color: #374151;
+}
+
+/* Dark Mode */
+
+body.dark-mode .registration-container {
+    background-color: #1c1f26;
+    color: #f0f6fc;
+}
+
+body.dark-mode .registration-container label {
+    color: #f0f6fc;
+}
+
+body.dark-mode .registration-container input[type="text"],
+body.dark-mode .registration-container input[type="email"],
+body.dark-mode .registration-container input[type="tel"],
+body.dark-mode .registration-container input[type="password"],
+body.dark-mode .registration-container select {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode .registration-container .gender-option,
+body.dark-mode .registration-container .terms-option {
+    color: #dcdcdc;
+}
