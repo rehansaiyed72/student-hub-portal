@@ -1,81 +1,101 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
+
 <head>
     <title>Student Registration Form</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
+
 <body>
 
     <h2>Student Registration Form</h2>
-<div class="registration-container">
-    <form id="registrationForm">
 
-        <label>Name:</label>
-        <input type="text" id="name">
-        <span id="nameError"></span>
-        <br><br>
+    <div class="registration-container">
 
-        <label>Email:</label>
-        <input type="email" id="email">
-        <span id="emailError"></span>
-        <br><br>
 
-        <label>Mobile Number:</label>
-        <input type="tel" id="mobile">
-        <span id="mobileError"></span>
-        <br><br>
+<form id="registrationForm" action="../php/register.php" method="POST">
 
-        <label>Password:</label>
-        <input type="password" id="password">
-        <span id="passwordError"></span>
-        <br><br>
+    <label>Name:</label>
+    <input type="text" id="name" name="name">
+    <span id="nameError"></span>
+    <br><br>
 
-        <label>Confirm Password:</label>
-        <input type="password" id="confirmPassword">
-        <span id="confirmPasswordError"></span>
-        <br><br>
+    <label>Email:</label>
+    <input type="email" id="email" name="email">
+    <span id="emailError"></span>
+    <br><br>
 
-        <label>Course:</label>
-        <select id="course">
-            <option value="">Select Course</option>
-            <option value="CE">Computer Engineering</option>
-            <option value="IT">Information Technology</option>
-            <option value="CSE">Computer Science</option>
-            <option value="AI">Artificial Intelligence</option>
-        </select>
-        <span id="courseError"></span>
-        <br><br>
+    <label>Mobile Number:</label>
+    <input type="tel" id="mobile" name="mobile">
+    <span id="mobileError"></span>
+    <br><br>
 
-        <label>Year:</label>
-        <select id="year">
-            <option value="">Select Year</option>
-            <option value="1">First Year</option>
-            <option value="2">Second Year</option>
-            <option value="3">Third Year</option>
-            <option value="4">Fourth Year</option>
-        </select>
-        <span id="yearError"></span>
-        <br><br>
+    <label>Password:</label>
+    <input type="password" id="password" name="password">
+    <span id="passwordError"></span>
+    <br><br>
 
-        <label>Gender:</label>
-        <input type="radio" name="gender" value="Male"> Male
-        <input type="radio" name="gender" value="Female"> Female
-        <input type="radio" name="gender" value="Other"> Other
-        <span id="genderError"></span>
-        <br><br>
+    <label>Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword">
+    <span id="confirmPasswordError"></span>
+    <br><br>
 
-        <input type="checkbox" id="terms">
-        <label>I accept the Terms and Conditions</label>
-        <span id="termsError"></span>
-        <br><br>
+    <label>Course:</label>
 
-        <button type="submit">Register</button>
+    <select id="course" name="course">
+        <option value="">Select Course</option>
+        <option value="CE">Computer Engineering</option>
+        <option value="IT">Information Technology</option>
+        <option value="CSE">Computer Science</option>
+        <option value="AI">Artificial Intelligence</option>
+    </select>
 
-        <p id="success"></p>
+    <span id="courseError"></span>
 
-    </form>
+    <br><br>
+
+    <label>Year:</label>
+
+    <select id="year" name="year">
+        <option value="">Select Year</option>
+        <option value="1">First Year</option>
+        <option value="2">Second Year</option>
+        <option value="3">Third Year</option>
+        <option value="4">Fourth Year</option>
+    </select>
+
+    <span id="yearError"></span>
+
+    <br><br>
+
+    <label>Gender:</label>
+
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+
+    <span id="genderError"></span>
+
+    <br><br>
+
+    <input type="checkbox" id="terms" name="terms" value="accepted">
+
+    <label>I accept the Terms and Conditions</label>
+
+    <span id="termsError"></span>
+
+    <br><br>
+
+    <button type="submit">Register</button>
+
+    <p id="success"></p>
+
+</form>
     </div>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
     <script src="../js/script.js"></script>
 
 </body>
 </html>
+

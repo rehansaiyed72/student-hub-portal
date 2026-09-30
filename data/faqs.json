@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "question": "How can I register?",
+        "answer": "Open the registration page and fill in all required details."
+    },
+    {
+        "id": 2,
+        "question": "How can I check my attendance?",
+        "answer": "Open the Attendance page from the navigation menu."
+    },
+    {
+        "id": 3,
+        "question": "Where can I see assignments?",
+        "answer": "Open the Assignments page to view your assignment details."
+    },
+    {
+        "id": 4,
+        "question": "How can I contact the college?",
+        "answer": "Use the Contact page to find the required contact information."
+    }
+]

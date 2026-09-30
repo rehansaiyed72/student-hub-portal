@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Rahul Patel",
+        "course": "Computer Engineering",
+        "year": "Second Year",
+        "email": "rahul@example.com"
+    },
+    {
+        "id": 2,
+        "name": "Aarav Shah",
+        "course": "Information Technology",
+        "year": "Third Year",
+        "email": "aarav@example.com"
+    },
+    {
+        "id": 3,
+        "name": "Priya Mehta",
+        "course": "Computer Science",
+        "year": "First Year",
+        "email": "priya@example.com"
+    },
+    {
+        "id": 4,
+        "name": "Riya Desai",
+        "course": "Artificial Intelligence",
+        "year": "Second Year",
+        "email": "riya@example.com"
+    },
+    {
+        "id": 5,
+        "name": "Karan Joshi",
+        "course": "Computer Engineering",
+        "year": "Fourth Year",
+        "email": "karan@example.com"
+    }
+]

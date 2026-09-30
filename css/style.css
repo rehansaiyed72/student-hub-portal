@@ -1,36 +1,4 @@
 
-
-
-table {
-    color: inherit;
-}
-
-th,
-td {
-    color: inherit;
-}
-
-/* Dark Mode */
-
-body.dark-mode table {
-    color: #f0f6fc;
-}
-
-body.dark-mode th,
-body.dark-mode td {
-    color: #f0f6fc;
-}
-
-/* Light Mode */
-
-body.light-mode table {
-    color: #111827;
-}
-
-body.light-mode th,
-body.light-mode td {
-    color: #111827;
-}
 * {
     margin: 0;
     padding: 0;
@@ -42,9 +10,10 @@ body {
     background-color: #0d1117;
     color: white;
     line-height: 1.6;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-/* Navigation Bar */
+/* Navigation */
 
 nav {
     background: #007BFF;
@@ -69,9 +38,10 @@ header {
     color: #00BFFF;
     text-align: center;
     padding: 30px;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-/* Main Content */
+/* Main */
 
 main {
     padding: 30px;
@@ -85,6 +55,7 @@ section {
     margin: 20px 0;
     border-left: 5px solid #007BFF;
     border-radius: 10px;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* Headings */
@@ -117,11 +88,127 @@ button {
 button:hover {
     background: #0056b3;
 }
+/* ==========================================
+   EVENTS PAGE
+   ========================================== */
 
-/* Input Fields */
+#eventSearch {
+    width: 60%;
+    padding: 10px;
+    margin: 15px 10px 15px 0;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+}
+
+#eventFilter,
+#eventSort {
+    padding: 10px;
+    margin: 15px 5px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+#eventList {
+    margin-top: 20px;
+}
+
+#eventList section {
+    background-color: #1c1f26;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 5px solid #007BFF;
+    border-radius: 10px;
+}
+
+#eventList section h3 {
+    color: #00BFFF;
+    margin-bottom: 10px;
+}
+
+#eventList section p {
+    margin: 5px 0;
+}
+
+#eventPagination {
+    text-align: center;
+    margin: 25px 0;
+}
+
+#eventPagination button {
+    margin: 5px;
+    padding: 8px 14px;
+}
+
+
+/* ==========================================
+   EVENTS - LIGHT MODE
+   ========================================== */
+
+body.light-mode #eventFilter,
+body.light-mode #eventSort {
+    background-color: white;
+    color: #111827;
+}
+
+body.light-mode #eventList section {
+    background-color: white;
+    color: #111827;
+}
+
+body.light-mode #eventList section p {
+    color: #374151 !important;
+}
+
+body.light-mode #eventList section h3 {
+    color: #007BFF;
+}
+
+
+/* ==========================================
+   EVENTS - DARK MODE
+   ========================================== */
+
+body.dark-mode #eventFilter,
+body.dark-mode #eventSort {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode #eventList section {
+    background-color: #1c1f26;
+    color: #f0f6fc;
+}
+
+body.dark-mode #eventList section p {
+    color: #dcdcdc !important;
+}
+
+body.dark-mode #eventList section h3 {
+    color: #00BFFF;
+}
+/* Theme Button */
+
+#themeToggle {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #1f6feb;
+    color: white;
+    font-size: 14px;
+}
+
+#themeToggle:hover {
+    background-color: #0056b3;
+}
+
+/* Inputs */
 
 input,
-textarea {
+textarea,
+select {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -139,23 +226,8 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 20px;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
-
-
-/* ==========================================
-   THEME BUTTON
-   ========================================== */
-
-#themeToggle {
-    padding: 8px 14px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: #1f6feb;
-    color: white;
-    font-size: 14px;
-}
-
 
 /* ==========================================
    LIGHT MODE
@@ -176,11 +248,6 @@ body.light-mode section {
     color: #111827 !important;
 }
 
-body.light-mode .card {
-    background-color: white !important;
-    color: #111827 !important;
-}
-
 body.light-mode p {
     color: #374151 !important;
 }
@@ -192,7 +259,8 @@ body.light-mode h3 {
 }
 
 body.light-mode input,
-body.light-mode textarea {
+body.light-mode textarea,
+body.light-mode select {
     background-color: white !important;
     color: #111827 !important;
 }
@@ -202,6 +270,11 @@ body.light-mode footer {
     color: #111827 !important;
 }
 
+body.light-mode table,
+body.light-mode th,
+body.light-mode td {
+    color: #111827 !important;
+}
 
 /* ==========================================
    DARK MODE
@@ -222,17 +295,19 @@ body.dark-mode section {
     color: #f0f6fc !important;
 }
 
-body.dark-mode .card {
-    background-color: #1c1f26 !important;
-    color: #f0f6fc !important;
-}
-
 body.dark-mode p {
     color: #dcdcdc !important;
 }
 
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #00BFFF !important;
+}
+
 body.dark-mode input,
-body.dark-mode textarea {
+body.dark-mode textarea,
+body.dark-mode select {
     background-color: #222 !important;
     color: white !important;
 }
@@ -242,22 +317,14 @@ body.dark-mode footer {
     color: white !important;
 }
 
-
-/* ==========================================
-   THEME TRANSITION
-   ========================================== */
-
-body,
-header,
-section,
-.card,
-footer,
-input,
-textarea {
-    transition: background-color 0.25s ease, color 0.25s ease;
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td {
+    color: #f0f6fc !important;
 }
+
 /* ==========================================
-   STUDENT REGISTRATION FORM
+   REGISTRATION FORM
    ========================================== */
 
 .registration-container {
@@ -267,6 +334,7 @@ textarea {
     background-color: #1c1f26;
     border-radius: 10px;
     border-left: 5px solid #007BFF;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .registration-container label {
@@ -329,7 +397,7 @@ textarea {
     margin-top: 15px;
 }
 
-/* Light Mode */
+/* Registration Light Mode */
 
 body.light-mode .registration-container {
     background-color: white;
@@ -354,7 +422,7 @@ body.light-mode .registration-container .terms-option {
     color: #374151;
 }
 
-/* Dark Mode */
+/* Registration Dark Mode */
 
 body.dark-mode .registration-container {
     background-color: #1c1f26;
@@ -371,10 +439,4 @@ body.dark-mode .registration-container input[type="tel"],
 body.dark-mode .registration-container input[type="password"],
 body.dark-mode .registration-container select {
     background-color: #222;
-    color: white;
-}
-
-body.dark-mode .registration-container .gender-option,
-body.dark-mode .registration-container .terms-option {
-    color: #dcdcdc;
-}
+```

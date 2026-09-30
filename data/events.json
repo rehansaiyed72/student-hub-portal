@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Tech Fest 2026",
+        "date": "2026-10-05",
+        "venue": "Main Auditorium",
+        "category": "Technical"
+    },
+    {
+        "id": 2,
+        "title": "Sports Day",
+        "date": "2026-10-10",
+        "venue": "College Ground",
+        "category": "Sports"
+    },
+    {
+        "id": 3,
+        "title": "Coding Competition",
+        "date": "2026-10-15",
+        "venue": "Computer Lab",
+        "category": "Technical"
+    },
+    {
+        "id": 4,
+        "title": "Cultural Night",
+        "date": "2026-10-20",
+        "venue": "Main Auditorium",
+        "category": "Cultural"
+    },
+    {
+        "id": 5,
+        "title": "Career Guidance Seminar",
+        "date": "2026-10-25",
+        "venue": "Seminar Hall",
+        "category": "Career"
+    },
+    {
+        "id": 6,
+        "title": "Project Exhibition",
+        "date": "2026-11-01",
+        "venue": "Block A",
+        "category": "Technical"
+    }
+]

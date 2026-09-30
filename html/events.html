@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Hub - Events</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Hub Portal</h1>
+        <h2>Events</h2>
+    </header>
+<nav>
+    <a href="dashboard.html">Home</a> |
+<a href="profile.html">Profile</a> |
+<a href="attendance.html">Attendance</a> |
+<a href="assignment.html">Assignments</a> |
+<a href="course.html">Courses</a> |
+<a href="result.html">Results</a> |
+<a href="timetable.html">Timetable</a> |
+<a href="contact.html">Contact</a> |
+<a href="login.html">Logout</a>
+ |
+<button id="themeToggle" type="button" aria-label="Toggle light and dark mode">
+    🌙 Dark Mode
+</button>
+</nav>
+
+    <main>
+
+        <input type="text" id="eventSearch" placeholder="Search events">
+
+        <select id="eventFilter">
+            <option value="all">All Categories</option>
+            <option value="Technical">Technical</option>
+            <option value="Sports">Sports</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Career">Career</option>
+        </select>
+
+        <select id="eventSort">
+            <option value="default">Sort By</option>
+            <option value="name">Name</option>
+            <option value="date">Date</option>
+        </select>
+
+        <p id="eventLoading">Loading events...</p>
+
+        <div id="eventList"></div>
+
+        <div id="eventPagination"></div>
+
+    </main>
+
+    <script src="../js/events.js"></script>
+
+</body>
+</html>
