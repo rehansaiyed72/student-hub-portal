@@ -12,7 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
         }
 
@@ -20,8 +20,9 @@
             background: white;
             padding: 30px;
             width: 320px;
+            max-width: calc(100% - 60px);
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
         }
 
         h2 {
@@ -35,7 +36,8 @@
             font-weight: bold;
         }
 
-        input {
+        input[type="email"],
+        input[type="password"] {
             width: 100%;
             padding: 10px;
             margin-top: 5px;
@@ -43,6 +45,14 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0 0 18px;
+            font-weight: normal;
         }
 
         button {
@@ -59,22 +69,32 @@
         button:hover {
             background-color: #1158c7;
         }
+
+        .message {
+            color: #b42318;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
 <body>
-
     <div class="login-box">
-
         <h2>StudentHub Login</h2>
 
-        <form id="loginForm">
-
+        <form id="loginForm" action="../php/login.php" method="POST">
             <label for="email">Email</label>
             <input
                 type="email"
                 id="email"
+                name="email"
                 placeholder="Enter your email"
+                autocomplete="username"
                 required
             >
 
@@ -82,39 +102,43 @@
             <input
                 type="password"
                 id="password"
+                name="password"
                 placeholder="Enter your password"
+                autocomplete="current-password"
                 required
             >
 
-            <button type="submit">Login</button>
+            <label class="remember">
+                <input type="checkbox" name="remember" value="1">
+                Remember me
+            </label>
 
+            <button type="submit">Login</button>
         </form>
 
-        <p style="text-align: center;">
+        <p id="loginMessage" class="message" role="alert" hidden></p>
+
+        <p class="register-link">
             Don't have an account?
             <a href="register.html">Register</a>
         </p>
-
     </div>
 
     <script>
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
+        const params = new URLSearchParams(window.location.search);
+        const message = document.getElementById("loginMessage");
 
-            event.preventDefault();
-
-            const email = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value.trim();
-
-            if (email === "" || password === "") {
-                alert("Please enter your email and password.");
-                return;
-            }
-
-            alert("Login successful!");
-
-            window.location.href = "dashboard.html";
-        });
+        if (params.get("error") === "1") {
+            message.textContent = "Invalid email or password.";
+            message.hidden = false;
+        } else if (params.get("timeout") === "1") {
+            message.textContent = "Your session expired. Please log in again.";
+            message.hidden = false;
+        } else if (params.get("logged_out") === "1") {
+            message.textContent = "You have been logged out successfully.";
+            message.style.color = "#16803c";
+            message.hidden = false;
+        }
     </script>
-
 </body>
 </html>
